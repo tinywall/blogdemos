@@ -1,7 +1,7 @@
 body{margin: 0;padding: 0;font-family: arial,sans-serif;}
 .header{background: #eeeeee;height: 50px;border-bottom: 1px solid #cccccc;border-top: 2px solid #326693;}
 .header-content,.main{width: 960px;margin: 0 auto;}
-.main{margin-top: 20px;min-height: 500px;}
+.main{margin-top: 20px;}
 .logo{font-size: 18px;font-weight: bold;float: left;margin-top: 15px;color: #326693;}
 .nav{list-style: none;float: left;}
 .nav li{float: left;margin-left: 20px;}
