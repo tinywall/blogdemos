@@ -1,29 +1,35 @@
+<?php
+$demos_path=(isset($config['demos_path']))?$config['demos_path']:"../../demos";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <?php if(isset($config['canonical_url'])){?>
+    <link rel="canonical" href="<?=$config['canonical_url'];?>" />
+    <?php }?>
+    <meta name="description" content="<?=isset($config['demo_title'])?$config['demo_title']:"Tinywall Infomedia Live Demo";?>">
     <meta name="author" content="<?=isset($config['demo_author'])?$config['demo_author']:"Tinywall Infomedia";?>">
-    <link rel="shortcut icon" href="ico/favicon.png">
+    <!-- <link rel="shortcut icon" href="ico/favicon.png"> -->
 	<title><?=isset($config['demo_title'])?$config['demo_title']." | Tinywall Infomedia":"Tinywall Infomedia";?></title>
 
 	<!-- Bootstrap core CSS -->
-    <link href="../static/lib/bootstrap-3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=$demos_path;?>/static/lib/bootstrap-3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../static/css/navbar-fixed-top.css" rel="stylesheet">
-    <link href="../static/css/sticky-footer.css" rel="stylesheet">
+    <link href="<?=$demos_path;?>/static/css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="<?=$demos_path;?>/static/css/sticky-footer.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="../static/lib/html5shiv.js"></script>
-      <script src="../static/lib/respond.min.js"></script>
+      <script src="<?=$demos_path;?>/static/lib/html5shiv.js"></script>
+      <script src="<?=$demos_path;?>/static/lib/respond.min.js"></script>
     <![endif]-->
     <!-- jQuery library -->
-	<script src="../static/lib/jquery-1.10.2.min.js"></script>
+	<script src="<?=$demos_path;?>/static/lib/jquery-1.10.2.min.js"></script>
 	<!-- Tinywall demo css -->
-	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?=$demos_path;?>/static/css/style.css">
 	</head>
 	<body>
 
@@ -73,13 +79,14 @@
 							google_ad_slot = "2678644028";
 							google_ad_width = 728;
 							google_ad_height = 15;
+							//-->
 							</script>
 							<script type="text/javascript"
 							src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 							</script>
 						</div>
 						<div class="col-md-3">
-							
+							.
 						</div>
 					</div>
 					<div class="row">
@@ -166,7 +173,7 @@
 	    </div>
 
 		<!-- Bootstrap core JavaScript -->
-	    <script src="../static/lib/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+	    <script src="<?=$demos_path;?>/static/lib/bootstrap-3.0.0/js/bootstrap.min.js"></script>
 	    <!-- Google Analytics -->
 	    <script type="text/javascript">
 		  var _gaq = _gaq || [];
